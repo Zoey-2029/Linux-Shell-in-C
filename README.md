@@ -1,6 +1,6 @@
 ### A simple linux shell written in C that supports a collection of builtin comands:
 * **quit**, which exits the shell and abandons any jobs that were still running. If there are any extra arguments after the **quit** which exits the shell and abandons any jobs that were still running. If there are any extra arguments after , just can just ignore them. 
-* **exit**, which does the same thing as . Extraneous arguments? Just ignore them.
+* **exit**, which does the same thing as **quit**. Extraneous arguments? Just ignore them.
 * **fg**, which prompts a stopped job to continue in the foreground or brings a running background job into the foreground. takes a single job number(e.g. **bg 3**).
 * **bg**, which prompts a stopped job to continue in the background. takes a single job number(e.g. **bg 3**). 
 * **slay**, which is used to terminate a single process (which may have many sibling processes as part of a larger pipeline). **slay** takes either one or two numeric arguments. If only one number is provided, it's assumed to be the pid of the process to be killed. If two numbers are provided, the first number is assumed to be the job number, and the second is assumed to be a process index within the job.  So, **saly 12345** would terminate, the process with pid 12345. **saly 2 0** would terminate the first process in the pipeline making up job 2. **slay 13 8** would terminate the 9th process in the pipeline of processes making up job 13. 
